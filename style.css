@@ -1,0 +1,175 @@
+.root {
+  --main-color: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to top, rgb(255, 165, 0), rgb(128, 128, 128));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+/* calculator */
+.mainparent {
+  width: 350px;
+  background: rgb(245, 245, 245, 0.8);
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: -4px 4px 5px rgba(rgb(128, 128, 128, 0.25));
+  backdrop-filter: blur(8px);
+}
+
+/*Result Section*/
+.result {
+  border: 1px solid rgb(0, 128, 0, 0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: bolder;
+  box-shadow: -4px 4px 5px rgba(rgb(128, 128, 128, 0.25));
+
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.items {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "clear clean percentage divide"
+    "no7 no8 no9 multi"
+    "no4 no5 no6 plus"
+    "no1 no2 no3 minus"
+    "no0 no0 dot ans ";
+}
+
+.items > button {
+  cursor: pointer;
+  min-height: 70px;
+  border-radius: 50%;
+  box-shadow: -4px 4px 5px rgba(rgba(0, 0, 0, 0.25));
+  font-size: 1.3rem;
+  color: var(--main-color);
+  background: rgba(59, 56, 56, 0.4);
+  border: none;
+}
+
+.items > button:hover {
+  background: rgb(0, 255, 255);
+  color: black;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.clean {
+  grid-area: clean;
+}
+
+.percentage {
+  grid-area: percentage;
+}
+.divide {
+  grid-area: divide;
+}
+
+.multi {
+  grid-area: multi;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.no-7 {
+  grid-area: no7;
+}
+
+.no-8 {
+  grid-area: no8;
+}
+
+.no-9 {
+  grid-area: no9;
+}
+
+.no-4 {
+  grid-area: no4;
+}
+
+.no-5 {
+  grid-area: no5;
+}
+
+.no-6 {
+  grid-area: no6;
+}
+
+.no-1 {
+  grid-area: no1;
+}
+
+.no-2 {
+  grid-area: no2;
+}
+
+.no-3 {
+  grid-area: no3;
+}
+
+.no-0 {
+  grid-area: no0;
+  border-radius: 30px !important;
+}
+
+/*.no00 {
+  grid-area: no00;
+}*/
+
+.dot {
+  grid-area: dot;
+}
+
+.ans {
+  grid-area: ans;
+}
+
+/*prank animation*/
+.Prank {
+  animation: shake 0.3s ease-in;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(10px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-10px);
+  }
+}
